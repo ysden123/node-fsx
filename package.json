@@ -1,0 +1,29 @@
+{
+  "name": "node-fsx",
+  "version": "1.0.0",
+  "description": "File System eXtension for NodeJS",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysden123/node-fsx.git"
+  },
+  "keywords": [
+    "file",
+    "system",
+    "extention",
+    "util",
+    "node.js"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ysden123/node-fsx/issues"
+  },
+  "homepage": "https://github.com/ysden123/node-fsx#readme",
+  "devDependencies": {
+    "chai": ""
+  }
+}
