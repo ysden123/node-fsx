@@ -20,13 +20,13 @@ describe('checker', function () {
         } catch (e) { }
     })
 
-    describe('#isPathExists', function () {
+    describe('#pathExistsSync', function () {
         it('Should check directory', function () {
-            checker.isPathExists(os.tmpdir()).should.be.equals(true);
-            checker.isPathExists('XYZbred3322').should.be.equals(false);
+            checker.pathExistsSync(os.tmpdir()).should.be.equals(true);
+            checker.pathExistsSync('XYZbred3322').should.be.equals(false);
         })
         it('Should check file', function () {
-            checker.isPathExists(testFile).should.be.equals(true);
+            checker.pathExistsSync(testFile).should.be.equals(true);
         })
     })
 })
