@@ -9,9 +9,10 @@ const should = require('chai').should(),
 
 describe('FileInfo', function () {
     let testFile = path.join(os.tmpdir(), 'checker_test.txt');
+    let text = 'abc';
 
     before(function () {
-        fs.writeFileSync(testFile, 'abc');
+        fs.writeFileSync(testFile, text);
     })
 
     after(function () {
@@ -32,6 +33,7 @@ describe('FileInfo', function () {
             fi.exists().should.be.equals(true);
         });
     });
+    
     describe('#creationTime', function () {
         it('Should return creation time', function () {
             let fi = new FileInfo(testFile);
@@ -42,6 +44,13 @@ describe('FileInfo', function () {
 
             fi = new FileInfo('bred');
             should.not.exist(fi.creationTime());
+        });
+    });
+    
+    describe('#size', function () {
+        it('Should return file size', function () {
+            let fi = new FileInfo(testFile);
+            fi.size().should.be.equals(text.length);
         });
     });
 })
