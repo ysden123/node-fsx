@@ -33,7 +33,7 @@ describe('FileInfo', function () {
             fi.exists().should.be.equals(true);
         });
     });
-    
+
     describe('#creationTime', function () {
         it('Should return creation time', function () {
             let fi = new FileInfo(testFile);
@@ -46,11 +46,35 @@ describe('FileInfo', function () {
             should.not.exist(fi.creationTime());
         });
     });
-    
+
     describe('#size', function () {
         it('Should return file size', function () {
             let fi = new FileInfo(testFile);
             fi.size().should.be.equals(text.length);
         });
+    });
+
+    describe('#isFile', function () {
+        it('Should return true for file', function () {
+            let fi = new FileInfo(testFile);
+            fi.isFile().should.be.equals(true);
+        });
+
+        it('Should return false for directory', function () {
+            let fi = new FileInfo(os.tmpdir());
+            fi.isFile().should.be.equals(false);
+        })
+    });
+
+    describe('#isDirectory', function () {
+        it('Should return true for directory', function () {
+            let fi = new FileInfo(os.tmpdir());
+            fi.isDirectory().should.be.equals(true);
+        });
+
+        it('Should return false for file', function () {
+            let fi = new FileInfo(testFile);
+            fi.isDirectory().should.be.equals(false);
+        })
     });
 })
