@@ -53,4 +53,12 @@ describe('FileInfo', function () {
             fi.size().should.be.equals(text.length);
         });
     });
+    
+    describe('#absPath', function () {
+        it('Should return file size', function () {
+            let fi = new FileInfo(testFile);
+            console.log(fi.absPath());
+            fi.absPath().should.be.a('string');
+        });
+    });
 })
