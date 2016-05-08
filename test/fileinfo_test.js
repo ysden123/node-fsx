@@ -33,7 +33,7 @@ describe('FileInfo', function () {
             fi.exists().should.be.equals(true);
         });
     });
-    
+
     describe('#creationTime', function () {
         it('Should return creation time', function () {
             let fi = new FileInfo(testFile);
@@ -46,7 +46,7 @@ describe('FileInfo', function () {
             should.not.exist(fi.creationTime());
         });
     });
-    
+
     describe('#size', function () {
         it('Should return file size', function () {
             let fi = new FileInfo(testFile);
