@@ -55,10 +55,31 @@ describe('FileInfo', function () {
     });
     
     describe('#absPath', function () {
-        it('Should return file size', function () {
+        it('Should return absolute path', function () {
             let fi = new FileInfo(testFile);
-            console.log(fi.absPath());
             fi.absPath().should.be.a('string');
+        });
+    });
+    
+    describe('#isFile', function () {
+        it('Should return true for file', function () {
+            let fi = new FileInfo(testFile);
+            fi.isFile().should.be.equals(true);
+        });
+        it('Should return false for directory', function () {
+            let fi = new FileInfo(os.tmpdir());
+            fi.isFile().should.be.equals(false);
+        });
+    });
+    
+    describe('#isDirectory', function () {
+        it('Should return false for file', function () {
+            let fi = new FileInfo(testFile);
+            fi.isDirectory().should.be.equals(false);
+        });
+        it('Should return true for directory', function () {
+            let fi = new FileInfo(os.tmpdir());
+            fi.isDirectory().should.be.equals(true);
         });
     });
 })
