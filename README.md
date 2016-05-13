@@ -20,5 +20,4 @@ console.log(fi.size());
 console.log(fi.absPath());
 console.log(fi.isFile());
 console.log(fi.isDirectory());
-console.log(fi.isDirectory());
 ```
