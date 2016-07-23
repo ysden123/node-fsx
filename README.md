@@ -15,7 +15,7 @@ Class FileInfo provides information functions for a file:
  - size()
  - absPath()
  - isFile()
- -isDirectory()
+ - isDirectory()
 
 ### Temp functions
 Module temp provides functions for temporary files:
