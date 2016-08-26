@@ -29,6 +29,7 @@ describe('temp', function() {
             let tmpFile1 = fsx.createTempFileName('prefix', '.txt');
             should.exist(tmpFile1);
             tmpFile1.startsWith(os.tmpDir()).should.be.true;
+            tmpFile1.includes('prefix-').should.be.true;
             tmpFile1.endsWith('.txt').should.be.true;
             let tmpFile2 = fsx.createTempFileName('prefix', '.txt');
             tmpFile1.should.not.equal(tmpFile2);
