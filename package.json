@@ -4,7 +4,7 @@
   "description": "File System eXtension for NodeJS",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "./node_modules/.bin/mocha test"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/ysden123/node-fsx#readme",
   "devDependencies": {
-    "chai": ""
+    "chai": "",
+    "mocha": "^3.1.2"
   }
 }
