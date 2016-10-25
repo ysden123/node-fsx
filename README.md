@@ -1,6 +1,8 @@
 # node-fsx
 File System eXtension for NodeJS
 
+![Travis status](https://secure.travis-ci.org/ysden123/node-fsx.png)
+
 ## Installation
 
 ```bash
